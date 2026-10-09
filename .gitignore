@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Open-Meteo cache
+.cache*
+
+# Raw datasets
+data/raw/
