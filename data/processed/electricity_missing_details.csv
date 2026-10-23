@@ -1,0 +1,2 @@
+timestamp_utc,column,reason
+2024-12-31T23:00:00Z,terna_forecast_mw,Forecast coverage absent in monthly and diagnostic API responses; underlying cause unknown.

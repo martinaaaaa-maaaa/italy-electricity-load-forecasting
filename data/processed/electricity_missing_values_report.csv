@@ -1,0 +1,3 @@
+dataset,column,missing_count,missing_pct
+electricity_clean,actual_load_mw,0,0.0
+electricity_clean,terna_forecast_mw,1,0.0028519279032626055
