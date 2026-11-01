@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "source_kind": "reanalysis",
+  "model": "era5",
+  "first_timestamp_utc": "2022-01-01T00:00:00Z",
+  "last_timestamp_utc": "2025-12-31T23:00:00Z",
+  "rows": 35064,
+  "weather_columns": 18,
+  "raw_responses": 288,
+  "raw_hashes_verified": 288,
+  "cells_exactly_matched_to_raw": 631152,
+  "missing_cells": 0,
+  "duplicated_timestamps": 0,
+  "flagged_by_thresholds": 0,
+  "local_days_23h": 4,
+  "local_days_25h": 4,
+  "clean_csv_sha256": "3871133a36f202b6781a72faed279a78868f7be156454ec8aaa3829358fe8b20",
+  "day_ahead_eligible": false,
+  "coordinates": {
+    "milano": {
+      "requested_latitude": 45.4642,
+      "requested_longitude": 9.19,
+      "returned_latitude": 45.5,
+      "returned_longitude": 9.25,
+      "returned_elevation": 147.0
+    },
+    "torino": {
+      "requested_latitude": 45.0703,
+      "requested_longitude": 7.6869,
+      "returned_latitude": 45.0,
+      "returned_longitude": 7.75,
+      "returned_elevation": 239.0
+    },
+    "bologna": {
+      "requested_latitude": 44.4949,
+      "requested_longitude": 11.3426,
+      "returned_latitude": 44.5,
+      "returned_longitude": 11.25,
+      "returned_elevation": 71.0
+    },
+    "roma": {
+      "requested_latitude": 41.9028,
+      "requested_longitude": 12.4964,
+      "returned_latitude": 42.0,
+      "returned_longitude": 12.5,
+      "returned_elevation": 58.0
+    },
+    "napoli": {
+      "requested_latitude": 40.8518,
+      "requested_longitude": 14.2681,
+      "returned_latitude": 41.0,
+      "returned_longitude": 14.25,
+      "returned_elevation": 19.0
+    },
+    "palermo": {
+      "requested_latitude": 38.1157,
+      "requested_longitude": 13.3615,
+      "returned_latitude": 38.0,
+      "returned_longitude": 13.25,
+      "returned_elevation": 32.0
+    }
+  }
+}

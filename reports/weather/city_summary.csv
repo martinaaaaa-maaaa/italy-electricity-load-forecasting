@@ -1,0 +1,7 @@
+city,mean_temperature_c,min_temperature_c,max_temperature_c,missing_weather_cells
+milano,15.255,-4.000,38.800,0
+torino,15.031,-4.200,39.500,0
+bologna,15.760,-4.300,38.800,0
+roma,17.793,-1.000,39.800,0
+napoli,17.993,0.900,35.600,0
+palermo,20.101,2.800,43.200,0
