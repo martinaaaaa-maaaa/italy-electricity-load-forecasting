@@ -136,9 +136,24 @@ def _local_date_mask(index, start: str, end: str) -> np.ndarray:
 
 
 def cutoff_timestamps(index) -> pd.DatetimeIndex:
-    """10:00 Europe/Rome on the local day before each target timestamp."""
-    issued_on = local_midnight(index) - pd.DateOffset(days=1)
-    return pd.DatetimeIndex(issued_on) + pd.Timedelta(hours=CUTOFF_HOUR)
+    """10:00 Europe/Rome on the calendar day before each target's local date.
+
+    The clock change is at 02:00, so 10:00 exists once on spring-forward and
+    fall-back days. The hour is taken from that civil time. It is not midnight
+    plus ten absolute hours, which lands on 09:00 or 11:00 local time when the
+    local day does not contain ten UTC hours before 10:00.
+    """
+    local = _as_utc_index(index).tz_convert(LOCAL_TZ)
+    previous = pd.DatetimeIndex(local.floor("D").tz_localize(None)) - pd.DateOffset(days=1)
+    wall = pd.to_datetime(
+        {
+            "year": previous.year,
+            "month": previous.month,
+            "day": previous.day,
+            "hour": np.full(len(previous), CUTOFF_HOUR),
+        }
+    )
+    return pd.DatetimeIndex(wall).tz_localize(LOCAL_TZ)
 
 
 def assert_lags_available(index, lags=SAFE_LAGS_HOURS) -> None:
@@ -246,7 +261,8 @@ def same_local_clock_source(index, days: int = 7) -> pd.DatetimeIndex:
     """
     local = _as_utc_index(index).tz_convert(LOCAL_TZ)
     naive = pd.DatetimeIndex(local.tz_localize(None) - pd.DateOffset(days=int(days)))
-    shifted = naive.tz_localize(LOCAL_TZ, nonexistent="NaT", ambiguous=False)
+    # ambiguous=True keeps the DST occurrence, which is the earlier UTC instant.
+    shifted = naive.tz_localize(LOCAL_TZ, nonexistent="NaT", ambiguous=True)
     return shifted.tz_convert("UTC")
 
 
