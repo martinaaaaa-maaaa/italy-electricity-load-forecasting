@@ -1,0 +1,2 @@
+model,n,nominal_coverage,empirical_coverage,mean_width_mw,below_interval_rate,above_interval_rate,pinball_q10_raw,pinball_q90_raw,crossed_quantiles
+lgbm_quantile80_noweather,8784,0.8,0.6634790528233151,2722.7028650326147,0.16746357012750454,0.16905737704918034,308.5703737548066,295.3562032677127,17

@@ -1,0 +1,5 @@
+group_type,group,model,n,nominal_coverage,empirical_coverage,coverage_gap_pp,mean_width_mw,below_interval_rate,above_interval_rate
+heatwave_status,heatwave,lgbm_quantile80_noweather,0,0.8,,,,,
+heatwave_status,june_september_non_heatwave,lgbm_quantile80_noweather,2928,0.8,0.6635928961748634,-13.640710382513666,3526.7245129959397,0.14549180327868852,0.1909153005464481
+heatwave_status,heatwave,lgbm_conformal80_expanding_noweather,0,0.8,,,,,
+heatwave_status,june_september_non_heatwave,lgbm_conformal80_expanding_noweather,2928,0.8,0.6765710382513661,-12.342896174863395,3272.9874957174634,0.13456284153005466,0.18886612021857924

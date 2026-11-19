@@ -1,0 +1,3 @@
+period,model,n,nominal_coverage,empirical_coverage,coverage_gap_pp,mean_width_mw,below_interval_rate,above_interval_rate
+training_selected_summer_window,lgbm_quantile80_noweather,168,0.8,0.5059523809523809,-29.404761904761912,4576.544670731491,0.10714285714285714,0.3869047619047619
+training_selected_summer_window,lgbm_conformal80_expanding_noweather,168,0.8,0.36904761904761907,-43.095238095238095,3377.195575152497,0.20833333333333334,0.4226190476190476
