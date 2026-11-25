@@ -1,0 +1,3 @@
+group,n_hours,n_local_days,mean_absolute_error_mw,median_absolute_error_mw,p80_absolute_error_mw
+non_holiday,2098,88,855.4310980382947,580.3216325178764,1289.8117037418067
+holiday,96,4,1810.8545410276781,1476.4876883026172,3074.6960247166426
